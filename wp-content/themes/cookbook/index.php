@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 
-<div class="container">
 
+<div class="container">
+<p>hello world</p>
 </div>
 
 
