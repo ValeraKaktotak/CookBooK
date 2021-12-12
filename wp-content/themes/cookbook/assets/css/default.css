@@ -1,0 +1,19 @@
+#my_nav_menu{
+    justify-content: right!important;
+} li a{
+    padding: 0 10px!important;
+}
+#my_nav_menu_footer{
+    justify-content: left!important;
+} li a{
+      padding: 0 10px!important;
+  }
+.justify-content-right {
+    justify-content: right !important;
+}
+.entry-content{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
