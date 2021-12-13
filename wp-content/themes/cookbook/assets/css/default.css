@@ -11,9 +11,23 @@
 .justify-content-right {
     justify-content: right !important;
 }
-.entry-content{
+.main-page-content .content{
     width: 100%;
-    max-width: 900px;
+    max-width: 700px;
     margin: 0 auto;
     text-align: center;
+}
+.main-page-content .content img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+.main-page-content .content h1{
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+.main-page-content .content article{
+    margin: 30px 0;
+    border-bottom: 1px solid #000;
 }
