@@ -41,7 +41,6 @@ function create_post_type() {
             'description'         => 'все рецепты',
             'public'              => true,
             'publicly_queryable'  => true, // зависит от public
-            'exclude_from_search' => true, // зависит от public
             'show_ui'             => true, // зависит от public
             'show_in_nav_menus'   => true, // зависит от public
             'show_in_menu'        => true, // показывать ли в меню адмнки
@@ -55,11 +54,33 @@ function create_post_type() {
             //'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
             'hierarchical'        => false,
             'supports'            => [ 'title', 'editor', 'thumbnail', 'author', 'excerpt'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
-            'taxonomies'          => [],
             'has_archive'         => false,
-            'rewrite'             => true,
             'query_var'           => true,
         )
     );
 }
 add_action( 'init', 'create_post_type' );
+
+function custom_taxonomy_category() {
+    $labels = array(
+        'name'      => 'categories',
+        'singular'  => 'category',
+        'menu_name' => 'categories'
+    );
+
+    $args = array(
+        'labels'            => $labels,
+        'hierarchical'      => true,
+        'public'            => true,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'show_in_nav_menus' => true,
+        'show_tagcloud'     => true,
+        'rewrite' => array( 'slug' => 'recipe_category' )
+    );
+
+    register_taxonomy( 'categories', 'recipes', $args );
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'custom_taxonomy_category', 10 );
