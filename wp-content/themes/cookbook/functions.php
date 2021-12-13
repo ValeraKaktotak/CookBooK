@@ -19,46 +19,22 @@ function theme_register_nav_menu() {
 }
 add_action( 'after_setup_theme', 'theme_register_nav_menu' );
 
-// Our custom post type function
+//CPT
 function create_post_type() {
-    register_post_type( 'dishes',
-        array(
-            'label'  => null,
-            'labels' => [
-                'name'               => 'Рецепты', // основное название для типа записи
-                'singular_name'      => 'Рецепт', // название для одной записи этого типа
-                'add_new'            => 'Добавить рецепт', // для добавления новой записи
-                'add_new_item'       => 'Добавление рецепта', // заголовка у вновь создаваемой записи в админ-панели.
-                'edit_item'          => 'Редактирование рецепта', // для редактирования типа записи
-                'new_item'           => 'Новый рецепт', // текст новой записи
-                'view_item'          => 'Смотреть рецепт', // для просмотра записи этого типа.
-                'search_items'       => 'Искать', // для поиска по этим типам записи
-                'not_found'          => 'Не найдено', // если в результате поиска ничего не было найдено
-                'not_found_in_trash' => 'Не найдено в корзине', // если не было найдено в корзине
-                'parent_item_colon'  => '', // для родителей (у древовидных типов)
-                'menu_name'          => 'Рецепты', // название меню
-            ],
-            'description'         => 'все рецепты',
-            'public'              => true,
-            'publicly_queryable'  => true, // зависит от public
-            'show_ui'             => true, // зависит от public
-            'show_in_nav_menus'   => true, // зависит от public
-            'show_in_menu'        => true, // показывать ли в меню адмнки
-            'show_in_admin_bar'   => true, // зависит от show_in_menu
-            'show_in_rest'        => true, // добавить в REST API. C WP 4.7
-            'rest_base'           => null, // $post_type. C WP 4.7
-            'menu_position'       => 4,
-            'menu_icon'           => null,
-            //'capability_type'   => 'post',
-            //'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
-            //'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
-            'hierarchical'        => false,
-            'supports'            => [ 'title', 'editor', 'thumbnail', 'author', 'excerpt'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
-            'has_archive'         => false,
-            'query_var'           => true,
-        )
-    );
+    $args = [
+        'public'      => true,
+        'has_archive' => true,
+        'supports'    => [
+            'title',
+            'excerpt',
+            'editor',
+            'thumbnail',
+        ]
+    ];
+
+    register_post_type( 'dishes', $args );
 }
+
 add_action( 'init', 'create_post_type' );
 
 function custom_taxonomy_category() {
