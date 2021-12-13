@@ -12,17 +12,12 @@ add_action( 'wp_enqueue_scripts', 'add_theme_style' );
 //добавили отображение thumbnails
 add_theme_support( 'post-thumbnails', array( 'post', 'recipes' ) );
 
-//регистрируем меню в хедере
-function header_menu(){
+//регистрируем меню
+function theme_register_nav_menu() {
     register_nav_menu( 'header', 'Меню в шапке' );
-}
-add_action( 'after_setup_theme', 'header_menu' );
-
-//регистрируем меню в футере
-function footer_menu(){
     register_nav_menu( 'footer', 'Меню в подвале' );
 }
-add_action( 'after_setup_theme', 'footer_menu' );
+add_action( 'after_setup_theme', 'theme_register_nav_menu' );
 
 // Our custom post type function
 function create_post_type() {
