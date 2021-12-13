@@ -21,7 +21,7 @@ add_action( 'after_setup_theme', 'theme_register_nav_menu' );
 
 // Our custom post type function
 function create_post_type() {
-    register_post_type( 'recipes',
+    register_post_type( 'dishes',
         array(
             'label'  => null,
             'labels' => [
@@ -76,10 +76,10 @@ function custom_taxonomy_category() {
         'show_admin_column' => true,
         'show_in_nav_menus' => true,
         'show_tagcloud'     => true,
-        'rewrite' => array( 'slug' => 'recipe_category' )
+        'rewrite' => array( 'slug' => 'dishes_category' )
     );
 
-    register_taxonomy( 'categories', 'recipes', $args );
+    register_taxonomy( 'categories', 'dishes', $args );
 }
 
 // Hook into the 'init' action
