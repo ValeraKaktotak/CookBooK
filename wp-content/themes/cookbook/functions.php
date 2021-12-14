@@ -10,7 +10,8 @@ function add_theme_style() {
 add_action( 'wp_enqueue_scripts', 'add_theme_style' );
 
 //добавили отображение thumbnails
-add_theme_support( 'post-thumbnails', array( 'post', 'recipes' ) );
+//add_theme_support( 'post-thumbnails', array( 'post', 'Dishes' ) );
+add_theme_support( 'post-thumbnails' );
 
 //регистрируем меню
 function theme_register_nav_menu() {
@@ -23,6 +24,7 @@ add_action( 'after_setup_theme', 'theme_register_nav_menu' );
 function create_post_type() {
     $args = [
         'public'      => true,
+        'label'       => __( 'Dishes' ),
         'has_archive' => true,
         'supports'    => [
             'title',
@@ -32,7 +34,7 @@ function create_post_type() {
         ]
     ];
 
-    register_post_type( 'dishes', $args );
+    register_post_type( 'Dishes', $args );
 }
 
 add_action( 'init', 'create_post_type' );

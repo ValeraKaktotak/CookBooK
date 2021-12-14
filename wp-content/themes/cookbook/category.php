@@ -9,7 +9,8 @@
                         <h1>
                             <?php the_title();?>
                         </h1>
-                        <?php the_content();?>
+                        <img class="card-img-top" src="<?php echo get_the_post_thumbnail_url(); ?>"
+                             data-holder-rendered="true">
                         <div class="btn-group">
                             <a class="btn btn-secondary" href="<?php the_permalink(); ?>"
                                role="button"><?php echo __( 'View details »' ); ?></a>

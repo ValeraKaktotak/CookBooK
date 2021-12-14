@@ -11,7 +11,8 @@
                     <h1>
                         <?php the_title();?>
                     </h1>
-                    <?php the_content();?>
+                    <img class="card-img-top" src="<?php echo get_the_post_thumbnail_url(); ?>"
+
                     <div class="btn-group ">
                         <a class="btn btn-secondary btn-lg" href="<?php the_permalink(); ?>"
                            role="button">View details »</a>
