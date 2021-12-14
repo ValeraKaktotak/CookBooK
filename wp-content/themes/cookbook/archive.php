@@ -27,8 +27,7 @@ get_header();
             </div>
         <?php endwhile;
     else :
-        // No, we don't have any posts, so maybe we display a nice message
-        echo "<p class='no-posts'>" . __( "Sorry, there are no posts at this time." ) . "</p>";
+        echo __( "Sorry, nothing else ;(" );
     endif; ?>
 </div>
 
