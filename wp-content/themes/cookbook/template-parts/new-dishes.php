@@ -6,7 +6,7 @@ $new_films = get_posts( [
 ] );
 ?>
 <div class="p-4 bg-light rounded">
-    <h4"><?php echo __( 'New Dishes' ); ?></h4>
+    <h4><?php echo __( 'New Dishes' ); ?></h4>
     <ol class="list-unstyled mb-0">
 		<?php foreach ( $new_films as $films ): ?>
             <li>

@@ -1,6 +1,7 @@
 <?php get_header(); ?>
-    <div class="main-page-content">
-        <div class="content">
+<div class="container">
+    <div class="row">
+        <div class="col">
             <article>
                 <?php echo get_template_part( 'template-parts/new-dishes' ); ?>
                 <div class="col-md-12">
@@ -21,5 +22,7 @@
             </article>
         </div>
     </div>
+</div>
+
 <?php
 get_footer();

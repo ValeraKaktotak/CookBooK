@@ -109,4 +109,4 @@ add_action( 'pre_get_posts', 'modify_archive_dishes_query' );
 
 
 
-include 'inc/acf-config.php';
+//include 'inc/acf-config.php';
