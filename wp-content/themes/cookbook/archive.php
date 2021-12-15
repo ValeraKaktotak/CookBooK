@@ -22,7 +22,7 @@ get_header();
             </div>
             <?php endwhile;
             else :
-                echo __( "Sorry, nothing else ;(" );
+                echo __( "Sorry, nothing else ;(", DISHES_DB_TEXT_DOMAIN );
             endif; ?>
         </div>
     </div>

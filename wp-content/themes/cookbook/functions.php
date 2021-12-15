@@ -1,11 +1,15 @@
 <?php
 
 
+$cur_theme = wp_get_theme();
+define( 'DISHES_DB_VERSION', $cur_theme->get( 'Version' ) );
+define( 'DISHES_DB_TEXT_DOMAIN', $cur_theme->get( 'Text Domain' ) );
+
 //подключаем стили
 function add_theme_style() {
     wp_enqueue_style( 'style', get_stylesheet_uri() );
-    wp_enqueue_style( 'bootstrap.css', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.css' );
-    wp_enqueue_style( 'default.css', get_template_directory_uri() . '/assets/css/default.css', array( 'bootstrap.css' ) );
+    wp_enqueue_style( 'bootstrap.css', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.css', [],'DISHES_DB_VERSION' );
+    wp_enqueue_style( 'default.css', get_template_directory_uri() . '/assets/css/default.css', array( 'bootstrap.css' ), 'DISHES_DB_VERSION' );
 }
 add_action( 'wp_enqueue_scripts', 'add_theme_style' );
 add_filter( 'excerpt_length', function(){
@@ -18,8 +22,8 @@ add_theme_support( 'post-thumbnails' );
 
 //регистрируем меню
 function theme_register_nav_menu() {
-    register_nav_menu( 'header', 'Меню в шапке' );
-    register_nav_menu( 'footer', 'Меню в подвале' );
+    register_nav_menu( 'header', 'Меню в шапке', DISHES_DB_TEXT_DOMAIN );
+    register_nav_menu( 'footer', 'Меню в подвале', DISHES_DB_TEXT_DOMAIN );
 }
 add_action( 'after_setup_theme', 'theme_register_nav_menu' );
 
@@ -27,7 +31,7 @@ add_action( 'after_setup_theme', 'theme_register_nav_menu' );
 function create_post_type() {
     $args = [
         'public'      => true,
-        'label'       => __( 'dishes' ),
+        'label'       => __( 'dishes', DISHES_DB_TEXT_DOMAIN ),
         'has_archive' => true,
         'supports'    => [
             'title',

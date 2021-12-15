@@ -15,12 +15,12 @@
                     </h1>
                     <img class="card-img-top" src="<?php echo get_the_post_thumbnail_url(); ?>"
                          data-holder-rendered="true">
-                    <p> <?php echo __( 'Dishes type:' ); ?><?php echo get_field( "dishes_type" ); ?></p>
-                    <p> <?php echo __( 'Expiration_date:' ); ?><?php echo get_field( "expiration_date" ); ?></p>
-                    <p> <?php echo __( 'Rating:' ); ?><?php echo get_field( "rating" ); ?></p>
+                    <p> <?php echo __( 'Dishes type:', DISHES_DB_TEXT_DOMAIN ); ?><?php echo get_field( "dishes_type" ); ?></p>
+                    <p> <?php echo __( 'Expiration_date:', DISHES_DB_TEXT_DOMAIN ); ?><?php echo get_field( "expiration_date" ); ?></p>
+                    <p> <?php echo __( 'Rating:', DISHES_DB_TEXT_DOMAIN ); ?><?php echo get_field( "rating" ); ?></p>
                     <div class="btn-group ">
                         <a class="btn btn-secondary btn-lg" href="<?php the_permalink(); ?>"
-                           role="button">View details »</a>
+                           role="button"><?php echo __( 'View details »', DISHES_DB_TEXT_DOMAIN ); ?></a>
                     </div>
                 </article>
             </div>
@@ -45,7 +45,7 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                                 <a class="btn btn-secondary" href="<?php the_permalink(); ?>"
-                                   role="button"><?php echo __( 'View details »' ); ?></a>
+                                   role="button"><?php echo __( 'View details »', DISHES_DB_TEXT_DOMAIN ); ?></a>
                             </div>
                         </div>
                     </div>
