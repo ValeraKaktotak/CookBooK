@@ -30,10 +30,12 @@ add_action( 'after_setup_theme', 'theme_register_nav_menu' );
 //CPT
 function create_post_type() {
     $args = [
-        'public'      => true,
-        'label'       => __( 'dishes', DISHES_DB_TEXT_DOMAIN ),
-        'has_archive' => true,
-        'supports'    => [
+        'public'       => true,
+        'label'        => __( 'dishes', DISHES_DB_TEXT_DOMAIN ),
+        'has_archive'  => true,
+        'hierarchical' => true,
+        'taxonomies'   => array('categories'),
+        'supports'     => [
             'title',
             'excerpt',
             'editor',
@@ -52,7 +54,6 @@ function custom_taxonomy_category() {
         'singular'  => 'category',
         'menu_name' => 'categories'
     );
-
     $args = array(
         'labels'            => $labels,
         'hierarchical'      => true,
@@ -63,7 +64,6 @@ function custom_taxonomy_category() {
         'show_tagcloud'     => true,
         'rewrite' => array( 'slug' => 'dishes_category' )
     );
-
     register_taxonomy( 'categories', 'dishes', $args );
 }
 
@@ -113,4 +113,4 @@ add_action( 'pre_get_posts', 'modify_archive_dishes_query' );
 
 
 
-//include 'inc/acf-config.php';
+include 'inc/acf-config.php';

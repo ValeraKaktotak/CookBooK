@@ -1,9 +1,11 @@
 <?php get_header(); ?>
 
 <div class="container">
+    <h1>Категория <?php echo the_terms(get_the_ID(), 'categories') ?></h1>
+    <hr>
     <div class="row">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
-        <div class="col">
+        <div class="col border margin-20">
             <h1>
                 <?php the_title();?>
             </h1>

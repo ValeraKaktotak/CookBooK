@@ -20,6 +20,7 @@
                 </h1>
                 <img class="card-img-top" src="<?php echo get_the_post_thumbnail_url(); ?>"
                      data-holder-rendered="true">
+                <p> <?php the_terms(get_the_ID(), 'categories') ?></p>
                 <p> <?php echo __( 'Dishes type:', DISHES_DB_TEXT_DOMAIN ); ?><?php echo get_field( "dishes_type" ); ?></p>
                 <p> <?php echo __( 'Expiration_date:', DISHES_DB_TEXT_DOMAIN ); ?><?php echo get_field( "expiration_date" ); ?></p>
                 <p> <?php echo __( 'Rating:', DISHES_DB_TEXT_DOMAIN ); ?><?php echo get_field( "rating" ); ?></p>
