@@ -9,10 +9,7 @@
 
 <div class="container">
     <div class="row">
-        <?php
-        $args = array( 'post_type' => 'dishes', 'posts_per_page' => 10 );
-        $loop = new WP_Query( $args );
-        if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post();?>
+        <?php if (have_posts()):while (have_posts()) : the_post();?>
         <div class="col margin-20 border">
             <article>
                 <h1>
