@@ -9,6 +9,11 @@
                         <img class="card-img-top" src="<?php echo get_the_post_thumbnail_url(); ?>" data-holder-rendered="true" />
                         <div >
                             <h3><?php echo the_title(); ?> </h3>
+                            <p> <?php echo __( 'Dishes type:' ); ?><?php echo get_field( "dishes_type" ); ?></p>
+                            <p> <?php echo __( 'Expiration_date:' ); ?><?php echo get_field( "expiration_date" ); ?></p>
+                            <p> <?php echo __( 'Rating:' ); ?><?php echo get_field( "rating" ); ?></p>
+                            <?php echo get_post_meta( get_the_ID(), 'rating', true ); ?>
+                            </p>
                             <p><?php the_content(); ?></p>
                             <div class="d-flex justify-content-center align-items-center">
                                 <div class="btn-group ">

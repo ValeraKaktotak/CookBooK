@@ -8,6 +8,7 @@
                 <h1>
                     <?php the_title();?>
                 </h1>
+
                 <img class="card-img-top" src="<?php echo get_the_post_thumbnail_url(); ?>"
                      data-holder-rendered="true">
                 <div class="btn-group margin-20">
