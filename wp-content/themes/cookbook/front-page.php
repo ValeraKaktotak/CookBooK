@@ -1,5 +1,6 @@
 <?php get_header(); ?>
     <?php ?>
+    <?php the_content();?>
     <div class="container">
         <h1>Dishes</h1>
         <hr>

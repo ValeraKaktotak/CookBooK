@@ -16,3 +16,6 @@ new \CookBook\Modules\Filter\Dishes_filter();
 
 include 'modules/nav-menu/nav-menu-class.php';
 new \CookBook\Modules\NavMenu\NavMenu();
+
+include 'modules/blocks/blocks-class.php';
+new \CookBook\Modules\Blocks\Blocks();
