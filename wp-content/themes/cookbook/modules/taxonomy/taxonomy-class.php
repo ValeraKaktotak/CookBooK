@@ -1,8 +1,8 @@
 <?php
 
-namespace CookBook\Dishes\Modules\Taxanomy;
+namespace CookBook\Dishes\Modules\Taxonomy;
 
-class Taxanomy {
+class Taxonomy {
     public function __construct() {
 
         $this->create_taxanomy_categories();
