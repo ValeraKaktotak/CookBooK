@@ -1,15 +1,15 @@
 <?php
 
-namespace CookBook\Dishes\Modules\Taxanomy;
+namespace CookBook\Dishes\Modules\Taxonomy;
 
-class Taxanomy {
+class Taxonomy {
     public function __construct() {
 
-        $this->create_taxanomy_categories();
-        //add_action( 'init', [ $this, 'create_taxanomy_categories' ] );
+        //$this->create_taxonomy_categories();
+        add_action( 'init', [ $this, 'create_taxonomy_categories' ] );
 
     }
-    private function create_taxanomy_categories() {
+    public function create_taxonomy_categories() {
         $labels = array(
             'name'      => 'categories',
             'singular'  => 'category',
