@@ -6,7 +6,7 @@
                 <?php echo get_template_part( 'template-parts/new-dishes' ); ?>
                 <div class="col-md-12">
                     <div class="box-shadow">
-                        <img class="card-img-top" src="<?php echo get_the_post_thumbnail_url(); ?>" data-holder-rendered="true" />
+                        <?php echo get_the_post_thumbnail(); ?>
                         <div >
                             <h3><?php echo the_title(); ?> </h3>
                             <p> <?php the_terms(get_the_ID(), 'categories') ?></p>

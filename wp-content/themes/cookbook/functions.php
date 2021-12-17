@@ -9,7 +9,7 @@ include 'modules/cpt/cpt-dishes-class.php';
 new \CookBook\Dishes\Modules\cpt\Cpt();
 
 include 'modules/taxonomy/taxonomy-class.php';
-new \CookBook\Dishes\Modules\Taxanomy\Taxanomy();
+new \CookBook\Dishes\Modules\Taxonomy\Taxonomy();
 
 include 'modules/filter/custom-search-filter-class.php';
 new \CookBook\Modules\Filter\Dishes_filter();
