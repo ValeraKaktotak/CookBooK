@@ -1,6 +1,7 @@
 <?php
 $new_dishes = get_posts( [
 	'post_type' => 'dishes',
+    'numberposts' => 2,
 	'orderby'   => 'publish_date',
 	'order'     => 'DESC',
 ] );

@@ -13,6 +13,7 @@ class Cpt {
             'has_archive'  => true,
             'hierarchical' => true,
             'taxonomies'   => array('categories'),
+            'show_in_rest'        => true,
             'supports'     => [
                 'title',
                 'excerpt',

@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
 <div class="container">
     <div class="row">
         <div class="col-8 margin-30-auto">
