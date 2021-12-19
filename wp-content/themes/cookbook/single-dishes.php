@@ -7,7 +7,7 @@
                 <?php echo get_template_part( 'template-parts/new-dishes' ); ?>
                 <div class="col-md-12">
                     <div class="box-shadow">
-                        <?php echo get_the_post_thumbnail(); ?>
+                        <?php echo get_the_post_thumbnail( null, 'large'); ?>
                         <div >
                             <h3><?php echo the_title(); ?> </h3>
                             <p> <?php the_terms(get_the_ID(), 'categories') ?></p>
@@ -19,8 +19,8 @@
                             <p><?php the_content(); ?></p>
                             <div class="d-flex justify-content-center align-items-center">
                                 <div class="btn-group ">
-                                    <a class="btn btn-secondary btn-lg" href="/"
-                                       role="button"><?php echo __( 'Go Home »', DISHES_DB_TEXT_DOMAIN ); ?></a>
+                                    <a class="btn btn-secondary btn-lg" href="<?php echo home_url().'/dishes';?>"
+                                       role="button"><?php echo __( 'Go Back »', DISHES_DB_TEXT_DOMAIN ); ?></a>
                                 </div>
                             </div>
                         </div>

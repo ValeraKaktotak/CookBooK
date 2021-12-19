@@ -6,7 +6,7 @@ include 'modules/theme/theme-class.php';
 new \CookBook\Modules\Theme\Theme();
 
 include 'modules/cpt/cpt-dishes-class.php';
-new \CookBook\Dishes\Modules\cpt\Cpt();
+new \CookBook\Dishes\Modules\cpt\CPT();
 
 include 'modules/taxonomy/taxonomy-class.php';
 new \CookBook\Dishes\Modules\Taxonomy\Taxonomy();

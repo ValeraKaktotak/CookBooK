@@ -2,7 +2,7 @@
 
 namespace CookBook\Dishes\Modules\cpt;
 
-class Cpt {
+class CPT {
     public function __construct() {
         add_action( 'init', [ $this, 'create_post_type' ] );
     }
