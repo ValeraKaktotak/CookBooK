@@ -16,7 +16,7 @@ $button_link = get_field( 'bg_button_link' );
             <h1 class="display-4"><?php echo $title; ?></h1>
             <p class="lead my-3"><?php echo $sub_title; ?></p>
             <p class="lead mb-0">
-                <a href="<?php echo $button_link; ?>"s
+                <a href="<?php echo $button_link; ?>"
                    class="btn btn-lg btn-secondary fw-bold border-white bg-white text-dark">
                     <?php echo $button_text; ?>
                 </a>

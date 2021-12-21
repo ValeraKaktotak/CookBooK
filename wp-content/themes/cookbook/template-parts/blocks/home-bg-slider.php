@@ -1,10 +1,8 @@
 <?php
+                // Do something...
 /**
  * @var array $block
  */
-$photo         = get_sub_field( 'photo' );
-$chef_name     = get_sub_field( 'chef_name' );
-$description   = get_sub_field( 'description' );
 ?>
 <div class="container">
     <div class="row justify-content-center">
@@ -16,7 +14,7 @@ $description   = get_sub_field( 'description' );
                         <?php $counter = get_row_index();?>
                         <div class="carousel-item <?php if ( $counter == 1) {echo 'active';} ?>">
                             <h2 style="margin-bottom: 20px;"><?php the_sub_field('chef-name');?></h2>
-                            <img src="<?php the_sub_field('photo',);?>" class="d-block w-100" style="border-radius: 100%;" alt="#">
+                            <img src="<?php the_sub_field('photo');?>" class="d-block w-100" style="border-radius: 100%;" alt="#">
                         </div>
                     <?php endwhile; ?>
                 </div>
