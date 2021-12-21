@@ -1,12 +1,13 @@
 <?php
 $new_dishes = get_posts( [
 	'post_type' => 'dishes',
+    'numberposts' => 2,
 	'orderby'   => 'publish_date',
 	'order'     => 'DESC',
 ] );
 ?>
 <div class="p-4 bg-light rounded">
-    <h4><?php echo __( 'New Dishes' ); ?></h4>
+    <h4><?php echo __( 'New Dishes', DISHES_DB_TEXT_DOMAIN ); ?></h4>
     <ol class="list-unstyled mb-0">
 		<?php foreach ( $new_dishes as $dishes ): ?>
             <li>

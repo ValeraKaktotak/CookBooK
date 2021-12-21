@@ -2,20 +2,18 @@
 
 namespace CookBook\Dishes\Modules\cpt;
 
-class Cpt {
+class CPT {
     public function __construct() {
-
-        $this->create_post_type();
-        //add_action( 'init', [ $this, 'create_post_type' ] );
-
+        add_action( 'init', [ $this, 'create_post_type' ] );
     }
-    private function create_post_type() {
+    public function create_post_type() {
         $args = [
             'public'       => true,
             'label'        => __( 'dishes', DISHES_DB_TEXT_DOMAIN ),
             'has_archive'  => true,
             'hierarchical' => true,
             'taxonomies'   => array('categories'),
+            'show_in_rest'        => true,
             'supports'     => [
                 'title',
                 'excerpt',
@@ -23,7 +21,6 @@ class Cpt {
                 'thumbnail',
             ]
         ];
-
         register_post_type( 'dishes', $args );
     }
 }
