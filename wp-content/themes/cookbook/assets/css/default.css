@@ -1,0 +1,32 @@
+#my_nav_menu{
+    justify-content: right!important;
+} li a{
+    padding: 0 10px!important;
+}
+#my_nav_menu_footer{
+    justify-content: left!important;
+} li a{
+      padding: 0 10px!important;
+  }
+.justify-content-right {
+    justify-content: right !important;
+}
+
+.margin-20{
+    margin: 20px!important;
+}
+.border{
+    border: 1px solid #000;
+}
+.margin-30-auto{
+    margin: 30px auto;
+}
+.mt-40{
+    margin-top: 40px;
+}
+.width-100{
+    width: 100%!important;
+}
+.mb10{
+    margin-bottom: 10px!important;
+}
