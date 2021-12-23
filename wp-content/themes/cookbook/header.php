@@ -1,3 +1,7 @@
+<?php
+$logo = get_field('opt_logo', 'option');
+$size = 'thumbnail';
+?>
 <html>
     <title>
         CookBook
@@ -10,7 +14,13 @@
     <body>
         <header class="p-3 bg-dark text-white">
             <div class="container">
-                <div>
+                <div class="margin-20" style="display: inline-block;">
+                    <a href="<?php echo site_url(); ?>"><?php echo wp_get_attachment_image( $logo['id'], $size ); ?></a>
+                </div>
+                <div class="margin-20" style="display: inline-block;">
+                    <?php echo get_field("opt_phone_number", "option");?>
+                </div>
+                <div style="display: inline-block;">
                     <?php wp_nav_menu( array(
                         'theme_location' => 'header',
                         'container' => null,

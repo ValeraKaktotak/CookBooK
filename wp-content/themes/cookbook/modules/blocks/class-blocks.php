@@ -3,6 +3,7 @@ namespace CookBook\Modules\Blocks;
 class Blocks {
     public function __construct() {
         add_action( 'acf/init', [ $this, 'blocks_registers' ] );
+        add_action( 'acf/init', [ $this, 'register_option' ]);
     }
     public function blocks_registers() {
         acf_register_block_type( [
@@ -22,6 +23,22 @@ class Blocks {
             'title'           => __( 'Recipe Block', DISHES_DB_TEXT_DOMAIN ),
             'render_template' => 'template-parts/blocks/recipe.php',
             'mode'            => 'edit',
+        ] );
+    }
+    function register_option() {
+        acf_add_options_page( [
+            'page_title' => 'My site phone number',
+            'menu_title' => 'Phone number Settings',
+            'menu_slug'  => 'phone-number-settings',
+            'capability' => 'edit_posts',
+            'redirect'   => false,
+        ] );
+        acf_add_options_page( [
+            'page_title' => 'My site logo',
+            'menu_title' => 'Logo Settings',
+            'menu_slug'  => 'logo-settings',
+            'capability' => 'edit_posts',
+            'redirect'   => false,
         ] );
     }
 }
