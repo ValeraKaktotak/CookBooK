@@ -7,6 +7,18 @@ class Theme {
         $this->theme_support();
         $this->define_constants();
         $this->add_style();
+
+        add_action( 'acf/init', [ $this, 'register_option_pages' ] );
+    }
+    public function register_option_pages() {
+        $config = $this->get_option_pages_config();
+
+        foreach ( $config as $page ) {
+            acf_add_options_page( $page );
+        }
+    }
+    private function get_option_pages_config(): array {
+        return include get_template_directory() . '/modules/theme/config/options-config.php';
     }
     private function define_constants() {
         $cur_theme = wp_get_theme();

@@ -4,7 +4,7 @@ $size = 'thumbnail';
 ?>
 <html>
     <title>
-        CookBook
+        <?php echo __( 'CookBook', DISHES_DB_TEXT_DOMAIN ); ?>
     </title>
     <head>
         <meta charset="utf-8">

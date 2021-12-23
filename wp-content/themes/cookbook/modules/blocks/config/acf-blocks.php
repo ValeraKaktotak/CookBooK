@@ -19,5 +19,4 @@ return [
         'render_template' => 'template-parts/blocks/recipe.php',
         'mode'            => 'edit',
     ],
-
 ];
