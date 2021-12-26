@@ -8,7 +8,7 @@
     <div class="row justify-content-center">
         <div class="col-md-4 text-center">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <h1>Наши шеф повара</h1>
+                <h1><?php echo __( 'Наши шеф повара', DISHES_DB_TEXT_DOMAIN ); ?></h1>
                 <div class="carousel-inner">
                     <?php while ( have_rows('chef-slider')): the_row();?>
                         <?php $counter = get_row_index();?>
