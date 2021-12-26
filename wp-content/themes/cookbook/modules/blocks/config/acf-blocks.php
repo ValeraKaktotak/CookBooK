@@ -19,4 +19,10 @@ return [
         'render_template' => 'template-parts/blocks/recipe.php',
         'mode'            => 'edit',
     ],
+    [
+        'name'            => 'O-weather',
+        'title'           => __( 'O weather', DISHES_DB_TEXT_DOMAIN ),
+        'render_template' => 'template-parts/blocks/weather-from-ow.php',
+        'mode'            => 'edit',
+    ]
 ];

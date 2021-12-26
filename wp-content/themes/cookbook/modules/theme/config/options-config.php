@@ -14,5 +14,12 @@ return [
         'menu_slug'  => 'logo-settings',
         'capability' => 'edit_posts',
         'redirect'   => false,
-    ]
+    ],
+    [
+    'page_title' => 'Weather api key',
+    'menu_title' => 'Weather api key',
+    'menu_slug'  => 'weather-api-settings',
+    'capability' => 'edit_posts',
+    'redirect'   => false,
+]
 ];

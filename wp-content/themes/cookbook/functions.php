@@ -19,3 +19,5 @@ new \CookBook\Modules\NavMenu\NavMenu();
 
 include 'modules/blocks/class-blocks.php';
 new \CookBook\Modules\Blocks\Blocks();
+
+include 'modules/weather-api/class-weather-api.php';
