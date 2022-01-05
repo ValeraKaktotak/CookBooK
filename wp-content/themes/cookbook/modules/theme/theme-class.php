@@ -9,6 +9,7 @@ class Theme {
         $this->add_style();
 
         add_action( 'acf/init', [ $this, 'register_option_pages' ] );
+        add_action( 'wp_enqueue_scripts', [ $this, 'my_scripts_method'] );
     }
     public function register_option_pages() {
         $config = $this->get_option_pages_config();
@@ -37,4 +38,10 @@ class Theme {
             return 20;
         } );
     }
+
+    function my_scripts_method(){
+        wp_enqueue_script( 'jquery' );
+        wp_enqueue_script('likes', get_template_directory_uri() . '/assets/js/likes.js', array('jquery') );
+    }
+
 }
