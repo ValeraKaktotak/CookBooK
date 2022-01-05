@@ -19,3 +19,9 @@ new \CookBook\Modules\NavMenu\NavMenu();
 
 include 'modules/blocks/class-blocks.php';
 new \CookBook\Modules\Blocks\Blocks();
+
+include 'modules/likes/class-likes.php';
+new \CookBook\Modules\Likes\Choice();
+
+include 'modules/weather-api/class-weather-api.php';
+

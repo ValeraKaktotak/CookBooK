@@ -15,8 +15,8 @@ get_header();
 
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="btn-group ">
-                        <a class="btn btn-secondary btn-lg" href="/"
-                           role="button">Go Home »</a>
+                        <a class="btn btn-secondary btn-lg" href="<?php echo home_url();?>"
+                           role="button"><?php echo __( 'Go Home »', DISHES_DB_TEXT_DOMAIN ); ?></a>
                     </div>
                 </div>
             </div>

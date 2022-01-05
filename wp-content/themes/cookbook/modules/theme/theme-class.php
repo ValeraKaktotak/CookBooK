@@ -7,6 +7,19 @@ class Theme {
         $this->theme_support();
         $this->define_constants();
         $this->add_style();
+
+        add_action( 'acf/init', [ $this, 'register_option_pages' ] );
+        add_action( 'wp_enqueue_scripts', [ $this, 'my_scripts_method'] );
+    }
+    public function register_option_pages() {
+        $config = $this->get_option_pages_config();
+
+        foreach ( $config as $page ) {
+            acf_add_options_page( $page );
+        }
+    }
+    private function get_option_pages_config(): array {
+        return include get_template_directory() . '/modules/theme/config/options-config.php';
     }
     private function define_constants() {
         $cur_theme = wp_get_theme();
@@ -25,4 +38,10 @@ class Theme {
             return 20;
         } );
     }
+
+    function my_scripts_method(){
+        wp_enqueue_script( 'jquery' );
+        wp_enqueue_script('likes', get_template_directory_uri() . '/assets/js/likes.js', array('jquery') );
+    }
+
 }

@@ -11,7 +11,7 @@
 
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="btn-group ">
-                        <a class="btn btn-secondary btn-lg" href="localhost/category/news/"
+                        <a class="btn btn-secondary btn-lg" href="<?php echo home_url(). '/category/news';?>"
                            role="button"><?php echo __( 'Go Back »', DISHES_DB_TEXT_DOMAIN ); ?></a>
                     </div>
                 </div>

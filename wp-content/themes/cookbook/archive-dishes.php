@@ -25,6 +25,7 @@
                     <a class="btn btn-secondary btn-lg" href="<?php the_permalink(); ?>"
                        role="button">View details »</a>
                 </div>
+                <button type="button" class="btn btn-primary likes-button" post-id="<?php echo $post->ID;?>" >Like</button>
 
             </article>
         </div>
